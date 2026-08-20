@@ -7,25 +7,40 @@ import LaunchDetails from './pages/LaunchDetail.jsx'
 import Statistics from './pages/Statistics.jsx'
 import NotFound from './pages/NotFound.jsx'
 import { RouterProvider } from 'react-router/dom'
+import Layout from './components/Layout.jsx'
 
 const router = createBrowserRouter(
 
   [
     {
-      path: '/',
-      element: <Home />
-    },
-    {
-      path: '/launch/:id',
-      element: <LaunchDetails />
-    },
-    {
-      path: '/statistics',
-      element: <Statistics />
-    },
-    {
-      path: '*',
-      element: <NotFound />
+
+      element: <Layout />
+      ,
+      children: [
+        {
+          path: '/',
+          element: <Home />
+
+        },
+
+        {
+          path: '/launch/:id',
+          element: <LaunchDetails />
+
+        },
+
+        {
+          path: '/statistics',
+          element: <Statistics />
+
+        },
+
+        {
+          path: '*',
+          element: <NotFound />
+
+        }
+      ]
     }
   ]
 
