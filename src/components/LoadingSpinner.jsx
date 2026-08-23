@@ -3,7 +3,7 @@ import React from 'react'
 const LoadingSpinner = () => {
   return (
     <div>
-      loading spinner
+      loading......
     </div>
   )
 }

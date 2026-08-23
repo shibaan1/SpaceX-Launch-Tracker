@@ -1,8 +1,13 @@
 import React from 'react'
 import launches from '../data/launches.json'
 import LaunchCard from '../components/LaunchCard.jsx'
+import LoadingSpinner from '../components/LoadingSpinner.jsx'
 
 const Home = () => {
+  const error = null
+
+  if (launches.length === 0) { return <LoadingSpinner /> }
+  if (error) { return <p>error:{error}</p> }
 
   return (
     <div>
@@ -13,7 +18,6 @@ const Home = () => {
           </li>
         )}
       </ul>
-
     </div>
   )
 }
