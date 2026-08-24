@@ -7,8 +7,8 @@ import Filters from '../components/Filters.jsx'
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState('')
-  const [selectedYear, setSelectedYear] = useState('')
-  const [selectedStatus, setSelectedStatus] = useState(false)
+  const [selectedYear, setSelectedYear] = useState('All')
+  const [selectedStatus, setSelectedStatus] = useState('All')
 
   const error = null
 
@@ -18,13 +18,11 @@ const Home = () => {
     return launches.filter((launch) => {
 
       const searchedItem = launch.name.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchedYear = selectedYear === 'ALL' || new Date(launch.date_utc).getFullYear()
-      const matchedStatus = selectedStatus === 'ALL' || launch.success
+      const matchedYear = selectedYear === 'All' || selectedYear === String(new Date(launch.date_utc).getFullYear())
+      const matchedStatus = selectedStatus === 'All' || launch.success === (selectedStatus === 'success')
 
-      return searchedItem, matchedStatus, matchedYear
-
+      return searchedItem && matchedStatus && matchedYear
     })
-
   }, [searchTerm, selectedStatus, selectedYear])
 
 
@@ -35,15 +33,19 @@ const Home = () => {
     <div>
       Home
 
-      <SearchBar searchterm={searchedItem} />
-      <Filters selectedYear={matchedYear} selectedStatus={matchedStatus} />
+      <SearchBar searchterm={searchTerm} onSearch={setSearchTerm} />
+      <Filters selectedYear={selectedYear} onYearChange={setSelectedYear} onStatusChange={setSelectedStatus} selectedStatus={selectedStatus} />
 
-      <ul>
-        {launches.map((launch) =>
-          <li key={launch.id}> <LaunchCard launch={launch} />
-          </li>
+      {filteredLaunches.length === 0 ?
+        (<p>no launches to display</p>
+        ) : (
+          <ul>
+            {filteredLaunches.map((launch) =>
+              <li key={launch.id}> <LaunchCard launch={launch} />
+              </li>
+            )}
+          </ul>
         )}
-      </ul>
     </div>
   )
 }

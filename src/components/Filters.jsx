@@ -4,7 +4,7 @@ const Filters = ({ selectedYear, selectedStatus, onYearChange, onStatusChange })
 
   return (
     <div>
-      <select name="" id="YEAR" value={selectedYear} onChange={onYearChange}>
+      <select name="" id="YEAR" value={selectedYear} onChange={(e) => onYearChange(e.target.value)}>
         <option value="All">ALL</option>
         <option value="2006">2006</option>
         <option value="2007">2007</option>
@@ -16,13 +16,10 @@ const Filters = ({ selectedYear, selectedStatus, onYearChange, onStatusChange })
 
       </select>
 
-      <select name="" id="STATUS" value={selectedStatus} onChange={onStatusChange}>
+      <select name="" id="STATUS" value={selectedStatus} onChange={(e) => onStatusChange(e.target.value)}>
         <option value="All">ALL</option>
         <option value="success">Success</option>
-        <option value="Failed">Failed</option>
-
-
-
+        <option value="failed">Failed</option>
 
       </select>
 
