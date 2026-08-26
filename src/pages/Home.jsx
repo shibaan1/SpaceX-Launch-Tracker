@@ -4,6 +4,7 @@ import LaunchCard from '../components/LaunchCard.jsx'
 import LoadingSpinner from '../components/LoadingSpinner.jsx'
 import SearchBar from '../components/SearchBar.jsx'
 import Filters from '../components/Filters.jsx'
+import Countdown from '../components/Countdown.jsx'
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -31,8 +32,9 @@ const Home = () => {
 
   return (
     <div>
-      Home
 
+      Home
+      <Countdown />
       <SearchBar searchterm={searchTerm} onSearch={setSearchTerm} />
       <Filters selectedYear={selectedYear} onYearChange={setSelectedYear} onStatusChange={setSelectedStatus} selectedStatus={selectedStatus} />
 
