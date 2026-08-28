@@ -4,9 +4,9 @@ const Countdown = () => {
 
   const [difference, setDifference] = useState(0)
 
-  const futureTime = new Date("2026-09-01T00:00:00.000Z")
-
   useEffect(() => {
+
+    const futureTime = new Date("2026-09-01T00:00:00.000Z")
 
     const interval = setInterval(() => {
 
@@ -19,7 +19,6 @@ const Countdown = () => {
       clearInterval(interval)
     }
   }, [])
-
 
   return (
     <div>

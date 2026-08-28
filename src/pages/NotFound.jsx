@@ -1,9 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 const NotFound = () => {
+
   return (
     <div>
-      not found
+      Error 404 : Data not found
+      <Link to= '/'>return home</Link>
     </div>
   )
 }

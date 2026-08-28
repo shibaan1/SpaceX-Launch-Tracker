@@ -1,11 +1,10 @@
 import React from 'react'
-import { useNavigate, useParams } from 'react-router'
+import { Link , useParams } from 'react-router'
 import launches from '../data/launches.json'
 
 const LaunchDetail = () => {
 
   const { id } = useParams()
-  const navigate = useNavigate()
 
   const findResult = launches.find((launch) => launch.id === id)
 
@@ -19,13 +18,10 @@ const LaunchDetail = () => {
     }
   }
 
-  const handleClick = () => {
-    navigate('/')
-  }
-
-  return (
+   return (
     <div>
-      <button onClick={handleClick}>go back to home</button>
+      
+      <Link to='/'>back to home </Link>
       launch details
       <p>mission name: {findResult.name}</p>
       <p>Flight number: {findResult.flight_number}</p>
