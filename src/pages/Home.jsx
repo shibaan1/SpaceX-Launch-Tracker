@@ -5,6 +5,7 @@ import LoadingSpinner from '../components/LoadingSpinner.jsx'
 import SearchBar from '../components/SearchBar.jsx'
 import Filters from '../components/Filters.jsx'
 import Countdown from '../components/Countdown.jsx'
+import './Home.css'
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -12,7 +13,6 @@ const Home = () => {
   const [selectedStatus, setSelectedStatus] = useState('All')
 
   const error = null
-
 
   const filteredLaunches = useMemo(() => {
 
@@ -26,14 +26,12 @@ const Home = () => {
     })
   }, [searchTerm, selectedStatus, selectedYear])
 
-
   if (launches.length === 0) { return <LoadingSpinner /> }
   if (error) { return <p>error:{error}</p> }
 
   return (
     <div>
 
-      Home
       <Countdown />
       <SearchBar searchterm={searchTerm} onSearch={setSearchTerm} />
       <Filters selectedYear={selectedYear} onYearChange={setSelectedYear} onStatusChange={setSelectedStatus} selectedStatus={selectedStatus} />
@@ -41,7 +39,7 @@ const Home = () => {
       {filteredLaunches.length === 0 ?
         (<p>no launches to display</p>
         ) : (
-          <ul>
+          <ul className='launchcard-home'>
             {filteredLaunches.map((launch) =>
               <li key={launch.id}> <LaunchCard launch={launch} />
               </li>
