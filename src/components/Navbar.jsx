@@ -1,18 +1,22 @@
 import { NavLink } from 'react-router'
+import './Navbar.css'
 
 const Navbar = () => {
   return (
-    <div>
-      <ul>
-        <li>
-          <NavLink to='/'>Home</NavLink>
-        </li>
-        <li >
-          <NavLink to='/statistics'>Statistics </NavLink>
-        </li>
-      </ul>
+    <div className='navbar'>
+
+      <div>
+        <p className='brandname'>SPACEX TRACKER</p>
+      </div>
+
+      <div className='navlinks'>
+        <NavLink to='/'>Home</NavLink>
+        <NavLink to='/statistics'>Statistics </NavLink>
+      </div>
+
     </div>
   )
 }
 
 export default Navbar
+
