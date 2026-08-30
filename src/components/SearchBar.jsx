@@ -1,10 +1,11 @@
 import React from 'react'
+import './SearchBar.css'
 
 const SearchBar = ({ searchterm, onSearch }) => {
 
   return (
-    <div>
-      <input type="text"
+    <div className='search'>
+      <input className='searchbar'  type="text"
         value={searchterm}
         onChange={(e) => onSearch(e.target.value)}
 

@@ -1,10 +1,11 @@
 import React from 'react'
+import './Filter.css'
 
 const Filters = ({ selectedYear, selectedStatus, onYearChange, onStatusChange }) => {
 
   return (
-    <div>
-      <select name="" id="YEAR" value={selectedYear} onChange={(e) => onYearChange(e.target.value)}>
+    <div className='filter'>
+      <select className='year-filter' name="" id="YEAR" value={selectedYear} onChange={(e) => onYearChange(e.target.value)}>
         <option value="All">ALL</option>
         <option value="2006">2006</option>
         <option value="2007">2007</option>
@@ -16,7 +17,7 @@ const Filters = ({ selectedYear, selectedStatus, onYearChange, onStatusChange })
 
       </select>
 
-      <select name="" id="STATUS" value={selectedStatus} onChange={(e) => onStatusChange(e.target.value)}>
+      <select className='status-filter' name="" id="STATUS" value={selectedStatus} onChange={(e) => onStatusChange(e.target.value)}>
         <option value="All">ALL</option>
         <option value="success">Success</option>
         <option value="failed">Failed</option>

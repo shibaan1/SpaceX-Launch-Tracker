@@ -1,0 +1,17 @@
+.search {
+    flex: 1;
+}
+
+.searchbar {
+    width: 95%;
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 5px;
+    padding: 7px 7px;
+    font-size: 1rem;
+}
+
+.searchbar:hover{
+     box-shadow: 0 0 20px rgb(180, 13, 13);
+}
+

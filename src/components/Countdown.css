@@ -3,6 +3,9 @@
     flex-direction: row;
     margin: 8px 3px;
     padding: 5px 5px;
+     /* border-bottom: 1px solid grey; */
+     /* border-left: 1px solid grey; */
+     /* border-right: 1px solid grey; */
 }
 
 .time-remaining {

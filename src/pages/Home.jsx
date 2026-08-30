@@ -30,11 +30,14 @@ const Home = () => {
   if (error) { return <p>error:{error}</p> }
 
   return (
-    <div>
+    <div className='home-container'>
 
       <Countdown />
-      <SearchBar searchterm={searchTerm} onSearch={setSearchTerm} />
+      <div className='search-filter-bar'>
+        <SearchBar searchterm={searchTerm} onSearch={setSearchTerm} />
       <Filters selectedYear={selectedYear} onYearChange={setSelectedYear} onStatusChange={setSelectedStatus} selectedStatus={selectedStatus} />
+
+      </div>
 
       {filteredLaunches.length === 0 ?
         (<p>no launches to display</p>
