@@ -1,0 +1,50 @@
+.countdown {
+    display: flex;
+    flex-direction: row;
+    margin: 8px 3px;
+    padding: 5px 5px;
+}
+
+.time-remaining {
+    font-size: 1.5rem;
+    font-family: "Source Sans 3", sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.timer {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 5px;
+    margin-left: 30px;
+    gap: 30px;
+    align-items: center;
+    width: 70%;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+
+}
+
+.minutes-number,
+.days-number,
+.hours-number,
+.seconds-number {
+    color: #E02D2D;
+    font-size: 2rem;
+}
+
+.days-unit,
+.hours-unit,
+.minutes-unit,
+.seconds-unit {
+    color: #AAAAAA;
+}
