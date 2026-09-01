@@ -40,7 +40,7 @@
 .seconds-number {
     color: #E02D2D;
     font-size: 2rem;
-    /* box-shadow: 0 0 20px red; */
+    text-shadow: 0 0 20px red;
 }
 
 .days-unit,

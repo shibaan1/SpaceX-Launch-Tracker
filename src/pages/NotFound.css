@@ -1,0 +1,25 @@
+.not-found{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+.error{
+    color: #E02D2D;
+    margin: 3px 3px;
+    padding: 5px 5px ;
+}
+
+.link{
+    text-decoration: underline;
+    color: gray;
+    border-radius: 10px;
+    /* border: 2px solid gray; */
+}
+
+.link:hover{
+    text-shadow: 0 0 20px red;
+}
