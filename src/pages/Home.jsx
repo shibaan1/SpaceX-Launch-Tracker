@@ -35,7 +35,7 @@ const Home = () => {
       <Countdown />
       <div className='search-filter-bar'>
         <SearchBar searchterm={searchTerm} onSearch={setSearchTerm} />
-      <Filters selectedYear={selectedYear} onYearChange={setSelectedYear} onStatusChange={setSelectedStatus} selectedStatus={selectedStatus} />
+        <Filters selectedYear={selectedYear} onYearChange={setSelectedYear} onStatusChange={setSelectedStatus} selectedStatus={selectedStatus} />
 
       </div>
 
@@ -49,6 +49,8 @@ const Home = () => {
             )}
           </ul>
         )}
+
+
     </div>
   )
 }

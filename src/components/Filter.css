@@ -13,10 +13,11 @@ gap: 30px;
     border-radius: 5px;
     padding: 7px 7px;
     font-size: 1rem;
+    box-shadow: 0 0 20px rgb(27, 16, 179);
+    border: 2px solid gray
 }
 
 .year-filter:hover,
 .status-filter:hover {
-    box-shadow: 0 0 20px rgb(180, 13, 13);
     background-color: #0c0c0c;
 }

@@ -3,7 +3,7 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-.search-filter-bar{
+.search-filter-bar {
     display: flex;
     flex-direction: row;
     align-items: center;

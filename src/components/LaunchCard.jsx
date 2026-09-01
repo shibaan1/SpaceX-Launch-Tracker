@@ -19,15 +19,14 @@ const LaunchCard = React.memo(
       <div className='launchcard'>
         <Link className='launchcard-link' to={`/launch/${launch.id}`}>
 
-          <div className='launch-info'>
-            <p className='launch-name'>mission name: {launch.name}</p>
-            <p className='launch-flight-number'>flight number: {launch.flight_number}</p>
-            <p className='launch-date'>launch date: {launch.date_utc.slice(0, 10)}</p>
+          <div className='launchcard-info'>
+            <p className='launchcard-name'>mission name: {launch.name}</p>
+            <p className='launchcard-flight-number'>flight number: {launch.flight_number}</p>
+            <p className='launchcard-date'>launch date: {launch.date_utc.slice(0, 10)}</p>
             <p className={launch.success ? 'success' : 'failed'}>success: {result()}</p>
           </div>
-          <div className='launch-img'>
+          <div className='launchcard-img'>
             <img src={launch.links.patch.small} alt="no image" />
-
           </div>
         </Link>
       </div>

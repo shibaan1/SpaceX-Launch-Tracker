@@ -7,7 +7,7 @@ const Countdown = () => {
 
   useEffect(() => {
 
-    const futureTime = new Date("2026-09-01T00:00:00.000Z")
+    const futureTime = new Date("2027-09-01T00:00:00.000Z")
 
     const interval = setInterval(() => {
 
@@ -28,22 +28,22 @@ const Countdown = () => {
 
         <div className='days'>
           <p className='days-number'>{Math.floor(difference / (1000 * 60 * 60 * 24))}</p>
-        <p className='days-unit'>Days</p>
+          <p className='days-unit'>Days</p>
         </div>
 
         <div className='hours'>
           <p className='hours-number'>{Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))}</p>
-        <p className='hours-unit'>Hours</p>
+          <p className='hours-unit'>Hours</p>
         </div>
 
         <div className='minutes'>
           <p className='minutes-number'>{Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))}</p>
-        <p className='minutes-unit'>Minutes</p>
+          <p className='minutes-unit'>Minutes</p>
         </div>
-        
+
         <div className='seconds'>
-        <p className='seconds-number'>{Math.floor((difference % (1000 * 60)) / (1000))}</p>
-        <p className='seconds-unit'>Seconds</p>
+          <p className='seconds-number'>{Math.floor((difference % (1000 * 60)) / (1000))}</p>
+          <p className='seconds-unit'>Seconds</p>
         </div>
 
       </div>
