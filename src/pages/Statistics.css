@@ -1,0 +1,32 @@
+.statistics {
+    padding: 5px 5px;
+    margin: 10px 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 20px;
+    margin-top: 60px;
+    padding-left: 50px;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 1.5rem;
+    gap: 20px;
+}
+
+.stats-div {
+    border: 2px solid gray;
+    width: 80%;
+    border-radius: 8px;
+    padding: 8px 5px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.stats-div:hover{
+    box-shadow: 0 0 20px #E02D2D;
+}
+
+.stats-total-launch,
+.stats-mostused,
+.stats-success {
+    color: rgb(158, 158, 158);
+}
+

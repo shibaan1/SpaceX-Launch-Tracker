@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react'
 import launches from '../data/launches.json'
+import './Statistics.css'
 
 const Statistics = () => {
 
@@ -8,7 +9,6 @@ const Statistics = () => {
     const successful = launches.filter((launch) => launch.success === true)
 
     return (successful.length / launches.length) * 100
-
 
   }, [])
 
@@ -28,15 +28,26 @@ const Statistics = () => {
       return mostUsed[curr] > mostUsed[acc] ? curr : acc
 
     })
-  },[ mostUsed])
+  }, [mostUsed])
 
 
   return (
-    <div>
-      statistics
-      <p>total launches: {launches.length}</p>
-      <p>success rate: {successRate}%</p>
-      <p>most used rocket : {topRocket}</p>
+    <div className='statistics'>
+
+      <div className='stats-div'>
+        <p className='stats-total-launch'>total launches</p>
+        <p>{launches.length}</p>
+      </div>
+
+      <div className='stats-div'>
+        <p className='stats-success'>success rate</p>
+        <p>{successRate}%</p>
+      </div>
+
+      <div className='stats-div'>
+        <p className='stats-mostused'>most used rocket</p>
+        <p> {topRocket}</p>
+      </div>
     </div>
   )
 }
