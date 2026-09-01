@@ -1,4 +1,4 @@
-.not-found{
+.not-found {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,19 +7,19 @@
     font-size: 1.5rem;
 }
 
-.error{
+.error {
     color: #E02D2D;
     margin: 3px 3px;
-    padding: 5px 5px ;
+    padding: 5px 5px;
 }
 
-.link{
+.link {
     text-decoration: underline;
     color: gray;
     border-radius: 10px;
     /* border: 2px solid gray; */
 }
 
-.link:hover{
+.link:hover {
     text-shadow: 0 0 20px red;
 }
