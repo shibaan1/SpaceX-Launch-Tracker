@@ -1,8 +1,8 @@
-.filter{
-margin-right: 20px;
-display: flex;
-flex-direction: row;
-gap: 30px;
+.filter {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }
 
 .year-filter,
@@ -20,5 +20,5 @@ gap: 30px;
 .year-filter:hover,
 .status-filter:hover {
     background-color: #0c0c0c;
-    box-shadow: 0 0 20px rgb(27, 16, 179);
+    box-shadow: 0 0 20px red;
 }

@@ -16,3 +16,41 @@
     width: 100%;
     padding: 0 1rem;
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.next-btn,
+.prev-btn {
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid black;
+    padding: 5px 5px;
+    border-radius: 3px;
+    margin: 2px 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.next-btn:hover,
+.prev-btn:hover {
+    box-shadow: 0 0 15px red;
+}
+
+.page-no {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+.next-btn:disabled,
+.prev-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: 0 0 10px transparent;
+}

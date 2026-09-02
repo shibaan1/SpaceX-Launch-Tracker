@@ -1,4 +1,4 @@
-.launchcard {
+.launch-success {
     background-color: #1d1c1c;
     border-radius: 5px;
     padding: 15px 15px;
@@ -10,9 +10,26 @@
     flex-direction: row;
 }
 
-.launchcard:hover {
+.launch-success:hover {
     background-color: #131313;
-    box-shadow: 0 0 20px rgb(203, 8, 8);
+    box-shadow: 0 0 20px rgb(12, 204, 95)
+}
+
+.launch-failed {
+    background-color: #1d1c1c;
+    border-radius: 5px;
+    padding: 15px 15px;
+    width: 95%;
+    gap: 15px;
+    height: 17rem;
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.launch-failed:hover {
+    background-color: #131313;
+    box-shadow: 0 0 20px rgb(255, 0, 0);
 }
 
 .launchcard-link {
@@ -21,7 +38,7 @@
     justify-content: space-between;
     gap: 25px;
     font-family: "Source Sans 3", sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .success {

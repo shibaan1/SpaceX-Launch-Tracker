@@ -16,7 +16,7 @@ const LaunchCard = React.memo(
     }
 
     return (
-      <div className='launchcard'>
+      <div className={launch.success ? 'launch-success' : 'launch-failed'}>
         <Link className='launchcard-link' to={`/launch/${launch.id}`}>
 
           <div className='launchcard-info'>
