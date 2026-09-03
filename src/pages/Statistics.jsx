@@ -8,7 +8,7 @@ const Statistics = () => {
 
     const successful = launches.filter((launch) => launch.success === true)
 
-    return (successful.length / launches.length) * 100
+    return Math.round((successful.length / launches.length) * 100)
 
   }, [])
 
@@ -30,23 +30,56 @@ const Statistics = () => {
     })
   }, [mostUsed])
 
+  const yearlyLaunches = useMemo(() => {
+
+    return launches.reduce((acc, launch) => {
+
+      acc[launch.date_utc.slice(0, 4)] = (acc[launch.date_utc.slice(0, 4)] || 0) + 1
+
+      return acc
+
+    }, {})
+  }, [])
+
 
   return (
     <div className='statistics'>
 
       <div className='stats-div'>
-        <p className='stats-total-launch'>total launches</p>
+        <p className='stats-name'>total launches</p>
         <p>{launches.length}</p>
       </div>
 
       <div className='stats-div'>
-        <p className='stats-success'>success rate</p>
+        <p className='stats-name'>success rate</p>
         <p>{successRate}%</p>
       </div>
 
       <div className='stats-div'>
-        <p className='stats-mostused'>most used rocket</p>
-        <p> {topRocket}</p>
+        <p className='stats-name'>most used rocket id</p>
+        <p> Falcon 1</p>
+      </div>
+
+      <div className='yearly-table'>
+        <p>launches per year: </p>
+
+        <table className='table'>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Launches</th>
+            </tr>
+          </thead>
+
+          <tbody className='table-body'>
+            {Object.entries(yearlyLaunches).map(([year, count]) =>
+              <tr key={year}>
+                <td> {year}</td>
+                <td>{count}</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
       </div>
     </div>
   )

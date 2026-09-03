@@ -39,7 +39,8 @@
 
 .next-btn:hover,
 .prev-btn:hover {
-    box-shadow: 0 0 15px red;
+    box-shadow: 0 0 15px gray;
+    background-color: black;
 }
 
 .page-no {
