@@ -63,14 +63,14 @@ const Home = () => {
 
       </div>
       <div className='pagination'>
-        <button className='prev-btn' onClick={handlePrev} disabled={currentPage === 1}>prev</button>
-        <p className='page-no'>page: {currentPage}/{totalPages}</p>
-        <button className='next-btn' onClick={handleNext} disabled={currentPage === totalPages}>next</button>
+        <button className='prev-btn' onClick={handlePrev} disabled={currentPage === 1}>Prev</button>
+        <p className='page-no'>Page: {currentPage}/{totalPages}</p>
+        <button className='next-btn' onClick={handleNext} disabled={currentPage === totalPages}>Next</button>
 
       </div>
 
       {filteredLaunches.length === 0 ?
-        (<p>no launches to display</p>
+        (<p>No Launches To Display</p>
         ) : (
           <ul className='launchcard-home'>
             {currentLaunches.map((launch) =>

@@ -3,11 +3,11 @@
 }
 
 .searchbar {
-    width: 95%;
+    width: 98%;
     background-color: #1e1e1e;
     color: white;
-    border-radius: 5px;
-    padding: 7px 7px;
+    border-radius: 15px;
+    padding: 5px 5px;
     font-size: 1rem;
     border: 2px solid gray;
 }

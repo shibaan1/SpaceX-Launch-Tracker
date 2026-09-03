@@ -46,22 +46,22 @@ const Statistics = () => {
     <div className='statistics'>
 
       <div className='stats-div'>
-        <p className='stats-name'>total launches</p>
+        <p className='stats-name'>Total Launches</p>
         <p>{launches.length}</p>
       </div>
 
       <div className='stats-div'>
-        <p className='stats-name'>success rate</p>
+        <p className='stats-name'>Success Rate</p>
         <p>{successRate}%</p>
       </div>
 
       <div className='stats-div'>
-        <p className='stats-name'>most used rocket id</p>
+        <p className='stats-name'>Most Used Rocket</p>
         <p> Falcon 1</p>
       </div>
 
       <div className='yearly-table'>
-        <p>launches per year: </p>
+        <p>Launches Per Year: </p>
 
         <table className='table'>
           <thead>

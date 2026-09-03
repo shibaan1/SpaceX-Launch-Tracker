@@ -23,7 +23,7 @@ const Countdown = () => {
 
   return (
     <div className='countdown'>
-      <p className='time-remaining'>TIME REMAINING TO LAUNCH IS :</p>
+      <p className='time-remaining'>TIME REMAINING TO LAUNCH:</p>
       <div className='timer'>
 
         <div className='days'>

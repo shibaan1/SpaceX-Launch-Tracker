@@ -5,7 +5,7 @@ const LoadingSpinner = () => {
   return (
     <div className='loading-spinner'>
       <div className='circle'></div>
-      loading......
+      Loading......
     </div>
   )
 }

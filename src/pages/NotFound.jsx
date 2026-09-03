@@ -7,7 +7,7 @@ const NotFound = () => {
   return (
     <div className='not-found'>
       <p className='error'>Error 404: Data not found</p>
-      <Link className='link' to= '/'>return home</Link>
+      <Link className='link' to= '/'>Return Home</Link>
     </div>
   )
 }
